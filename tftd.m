@@ -11,7 +11,7 @@ function [s, a] = tftd(n, x, PASO)
     for k = 1: length(s)
       sum=0;
       for w = 1: length(n)
-        sum = sum + (x(w)*exp(-1j * 2*pi * s(k)* (w-1)));
+        sum = sum + (x(w)*exp(-1j * 2*pi * s(k)* n(w)));
       endfor
       a(k)=sum;
     endfor
